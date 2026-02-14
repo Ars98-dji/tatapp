@@ -104,7 +104,7 @@ WSGI_APPLICATION = 'tatlight_backend.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('postgresql://tatlight_db_user:LRFxwc5FAQG6hh129FSOTocVC59GRxjG@dpg-d689pg15pdvs73fuviug-a.oregon-postgres.render.com/tatlight_db'))
+    'default': dj_database_url.parse(env('DATABASE_URL'))
 }
 
 
