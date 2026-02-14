@@ -5,22 +5,35 @@ REMPLACER la section en haut de votre settings.py avec ce code
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+
 from datetime import timedelta
+import dj_database_url
+import environ
+# 
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Charger les variables d'environnement depuis .env
-load_dotenv(BASE_DIR / '.env')
+# Initialiser django-environ
+env = environ.Env(
+    DEBUG=(bool, True)
+)
+
+# Lire le fichier .env
+environ.Env.read_env(BASE_DIR / ".env")
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-this-in-production')
+SECRET_KEY = env('SECRET_KEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost'])
+
 
 
 # Application definition
@@ -82,11 +95,16 @@ WSGI_APPLICATION = 'tatlight_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default=os.getenv('postgresql://tatlight_db_user:LRFxwc5FAQG6hh129FSOTocVC59GRxjG@dpg-d689pg15pdvs73fuviug-a.oregon-postgres.render.com/tatlight_db'))
 }
 
 
