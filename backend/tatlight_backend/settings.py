@@ -199,7 +199,7 @@ SIMPLE_JWT = {
 
 
 # CORS Configuration
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:5173').split(',')
+CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')
 CORS_ALLOW_CREDENTIALS = True
 
 
@@ -215,4 +215,5 @@ LOYALTY_TIERS = {
 
 
 # Frontend URL (pour les redirections de paiement)
-FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
+FRONTEND_URL="https://apptat.vercel.app"
+
