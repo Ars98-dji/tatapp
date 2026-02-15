@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {Menu, X, Sparkles, User, ShoppingCart} from 'lucide-react'
+import {Menu, X, Sparkles, User, } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

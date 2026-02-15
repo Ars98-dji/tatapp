@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {CreditCard, Lock, Check, ShoppingBag, Gift, Download, ArrowRight, ShieldCheck} from 'lucide-react'
 

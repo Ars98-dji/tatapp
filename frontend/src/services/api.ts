@@ -2,8 +2,8 @@
 import axios from "axios";
 
 // Utiliser la variable d'environnement Vite
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://tatapp.onrender.com";
+console.log("API URL:", API_BASE_URL);
 const API = axios.create({
   baseURL: `${API_BASE_URL}/api`,
   headers: {

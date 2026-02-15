@@ -1,5 +1,5 @@
 // Offline.tsx
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Offline() {
   const [score, setScore] = useState(0)

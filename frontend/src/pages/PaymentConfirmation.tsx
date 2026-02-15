@@ -1,5 +1,5 @@
 // frontend/src/pages/PaymentConfirmation.tsx
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { CheckCircle, XCircle, Loader, Download, ArrowRight } from 'lucide-react'
 import API from '@/services/api'

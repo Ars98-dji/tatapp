@@ -1,5 +1,5 @@
 /// Page "À propos" de Tatlight
-import React from 'react'
+
 import { Phone } from "lucide-react"
 
 export default function About() {

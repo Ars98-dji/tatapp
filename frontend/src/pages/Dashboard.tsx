@@ -1,13 +1,13 @@
 // frontend/src/pages/Dashboard.tsx
-import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { User, ShoppingBag, Download, Gift, Star, TrendingUp, Clock, Award, Sparkles, Camera, LogOut, Edit2, Save, X } from 'lucide-react'
+import  { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import {  ShoppingBag, Download, Gift,  TrendingUp, Award, Sparkles, Camera, LogOut, Edit2, Save, X } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import API from '@/services/api'
 
 export default function Dashboard() {
   const { user, logout, refreshUser } = useAuth()
-  const navigate = useNavigate()
+
   
   const [purchases, setPurchases] = useState([])
   const [loading, setLoading] = useState(true)

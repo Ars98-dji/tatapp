@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {Package, TrendingUp, Users, DollarSign, Plus, Download, Eye, Trash2, Edit, Image as ImageIcon, Tag, Gift, Bell, BarChart3, FileText, Settings, Sparkles} from 'lucide-react'
+import {Package, TrendingUp, Users, DollarSign, Plus, Download, Eye, Trash2, Edit, Image as ImageIcon, Tag, Gift,  BarChart3, FileText, Settings, Sparkles} from 'lucide-react'
 
 export default function Admin() {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'products' | 'users' | 'coupons'>('dashboard')

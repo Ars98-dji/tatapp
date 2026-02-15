@@ -1,7 +1,7 @@
 // Home.tsx
-import React from 'react'
+
 import { Link } from 'react-router-dom'
-import {BookOpen, Music, Layout, GraduationCap, Star, TrendingUp, Sparkles, ArrowRight, Users} from 'lucide-react'
+import {BookOpen, Layout, GraduationCap, Star, TrendingUp, Sparkles, ArrowRight, Users} from 'lucide-react'
 
 export default function Home() {
   const categories = [

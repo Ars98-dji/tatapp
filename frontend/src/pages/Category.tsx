@@ -1,5 +1,5 @@
 // frontend/src/pages/Category.tsx
-import React, { useState, useEffect, useMemo } from 'react'
+import  { useState, useEffect, useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import {Filter, Grid, List, Star, TrendingUp, ArrowRight} from 'lucide-react'
 import API from '@/services/api'

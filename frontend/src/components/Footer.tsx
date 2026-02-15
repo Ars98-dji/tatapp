@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
-import {Sparkles, Mail, Heart} from 'lucide-react'
+import {Sparkles, Mail} from 'lucide-react'
 
 export default function Footer() {
   return (

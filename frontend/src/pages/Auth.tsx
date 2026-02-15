@@ -1,20 +1,18 @@
 // frontend/src/pages/Auth.tsx
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+
 import { useAuth } from '@/hooks/useAuth'
 
 export default function Auth() {
   const [mode, setMode] = useState<'connexion' | 'inscription'>('connexion')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [name, setName] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [passwordConfirm, setPasswordConfirm] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   
-  const navigate = useNavigate()
   const { login, register } = useAuth()
 
   const handleSubmit = async (e: React.FormEvent) => {
